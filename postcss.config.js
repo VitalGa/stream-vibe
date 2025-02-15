@@ -1,4 +1,4 @@
-import postcssPxtorem from "postcss-pxtorem"
+import postcssPxToRem from "postcss-pxtorem"
 
 export default ({ env }) => {
   const isProd = env === "production"
@@ -6,7 +6,7 @@ export default ({ env }) => {
 
   if (isProd) {
     plugins.push(
-      postcssPxtorem({
+      postcssPxToRem({
         propList: ["*"],
         mediaQuery: true,
       })
